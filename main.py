@@ -12,10 +12,12 @@ def chooseDirectoryToReorganize():
 
 
 def createFolderIfNotExists():
-    # CHECK IF HAVE A FOLDER WITH SAME NAME AS PRÉ CHOOSEN DESTINATION FOLDER, IF NOT HAVE CREATE TO PUT REORGANIZED FILES
+    # CHECK IF HAVE A FOLDER WITH SAME NAME AS PRE CHOOSEN DESTINATION FOLDER
     for folder in destination_folder_list:
         if os.path.isdir(f'{reorganized_directory_path}/{folder}'):
             pass
+
+        # IF NOT HAVE, CREATE TO PUT REORGANIZED FILES
         else:
             os.mkdir(f'{reorganized_directory_path}/{folder}')
 
